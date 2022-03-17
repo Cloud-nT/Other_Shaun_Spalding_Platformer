@@ -6,6 +6,10 @@ key_jump = keyboard_check_pressed(vk_space);
 //calculate movement
 var _move = key_right - key_left;
 
+if(place_meeting(x,y+1,oWall)) && (key_jump){
+	vsp = -jumpsp;
+}
+
 hsp = _move * walksp;
 
 vsp += grv;
