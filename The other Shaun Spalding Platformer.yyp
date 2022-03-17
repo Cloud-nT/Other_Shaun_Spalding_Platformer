@@ -1,9 +1,15 @@
 {
   "resources": [
     {"id":{"name":"sInvisibleWall","path":"sprites/sInvisibleWall/sInvisibleWall.yy",},"order":1,},
-    {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":0,},
+    {"id":{"name":"sPlayerA","path":"sprites/sPlayerA/sPlayerA.yy",},"order":4,},
+    {"id":{"name":"sWalls","path":"sprites/sWalls/sWalls.yy",},"order":5,},
+    {"id":{"name":"sGrain","path":"sprites/sGrain/sGrain.yy",},"order":6,},
+    {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":2,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
+    {"id":{"name":"sPlayerR","path":"sprites/sPlayerR/sPlayerR.yy",},"order":7,},
+    {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":3,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":1,},
+    {"id":{"name":"sClouds","path":"sprites/sClouds/sClouds.yy",},"order":8,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
