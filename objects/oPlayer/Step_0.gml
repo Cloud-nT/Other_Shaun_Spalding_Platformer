@@ -32,3 +32,13 @@ if(place_meeting(x,y+vsp,oWall)){
 	vsp = 0;
 }
 y += vsp;
+
+//animation
+if(!place_meeting(x,y+1,oWall)){
+	sprite_index = sPlayerA;
+	image_speed = 0;
+	if(vsp > 0) image_index = 1;
+	else image_index = 0;	
+} else {
+	sprite_index = sPlayer;
+}
