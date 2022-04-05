@@ -6,7 +6,11 @@ key_jump = keyboard_check_pressed(vk_space);
 //calculate movement
 var _move = key_right - key_left;
 
-if(place_meeting(x,y+1,oWall)) && (key_jump){
+if(!place_meeting(x,y+vsp,oWall)){
+	canjump -= 1;
+}
+
+if(canjump > 0) && (key_jump){
 	vsp = -jumpsp;
 }
 
@@ -19,6 +23,9 @@ if(place_meeting(x+hsp,y,oWall)){
 	while(!place_meeting(x+sign(hsp),y,oWall)){
 		x += sign(hsp);
 	}
+	if(place_meeting(x,y,oWall)){
+		x += sign(hsp);
+	}
 	hsp = 0;
 }
 
@@ -29,7 +36,11 @@ if(place_meeting(x,y+vsp,oWall)){
 	while(!place_meeting(x,y+sign(vsp),oWall)){
 		y += sign(vsp);
 	}
+	if(place_meeting(x,y,oWall)){
+		y += sign(vsp);
+	}
 	vsp = 0;
+	canjump = 10;
 }
 y += vsp;
 
@@ -49,3 +60,7 @@ if(!place_meeting(x,y+1,oWall)){
 }
 
 if(hsp != 0) image_xscale = sign(hsp);
+
+if(keyboard_check_pressed(ord("R"))){
+	game_restart();
+}
